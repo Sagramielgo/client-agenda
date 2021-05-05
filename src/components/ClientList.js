@@ -11,6 +11,7 @@ function ClientList(props) {
       return (
         <li key={client.id}>
           {client.name}
+          {client.lastName}
           <Link to={`/detail/${client.id}`}>Editar</Link>
         </li>
       );

@@ -5,10 +5,12 @@ const getAll = () => {
     {
       id: '123',
       name: 'Sagra',
+      lastName: 'Mielgo',
     },
     {
       id: '456',
       name: 'Miguel',
+      lastName: 'Del Mazo',
     },
   ];
 };
@@ -31,6 +33,7 @@ const set = (clients, clientId, client) => {
   const newClients = [...clients];
   const foundClient = newClients.find((client) => client.id === clientId);
   foundClient.name = client.name;
+  foundClient.lastName = client.lastName;
   return newClients;
 };
 
