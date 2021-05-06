@@ -1,7 +1,12 @@
 import { Link } from 'react-router-dom';
+import '../styles/App.scss';
 
 function ClientNew() {
-  return <Link to="/detail/new">+</Link>;
+  return (
+    <div className="btnNew">
+      <Link to="/detail/new">+</Link>
+    </div>
+  );
 }
 
 export default ClientNew;

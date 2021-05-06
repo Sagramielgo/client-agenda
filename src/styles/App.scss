@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+.btnNew {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border: 2px solid grey;
+  border-radius: 50%;
+  font-size: 40px;
+}
+
+//clientList
+.listContainer {
+  margin: 5%;
+}
+.clientList {
+  display: flex;
+}
+.card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid grey;
+  margin: 5px;
+}
+.btn {
+  width: 100px;
+}
+
+//ClientDetail
+.formContainer {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  &__input {
+    margin-bottom: 20px;
+  }
+}

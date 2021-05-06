@@ -1,4 +1,5 @@
-import { v4 as uuidv4 } from 'uuid';
+import { getDefaultNormalizer } from '@testing-library/dom';
+import { v4 as uuidv4 } from 'uuid'; //create random id
 
 const getAll = () => {
   return [
@@ -6,11 +7,15 @@ const getAll = () => {
       id: '123',
       name: 'Sagra',
       lastName: 'Mielgo',
+      email: 'sagramielgo@gmail.com',
+      country: 'Spain',
     },
     {
       id: '456',
       name: 'Miguel',
       lastName: 'Del Mazo',
+      email: 'miguel@gmail.com',
+      country: 'Euskadi',
     },
   ];
 };
@@ -25,7 +30,6 @@ const create = (clients, client) => {
   const newClient = { ...client };
   newClient.id = uuidv4();
   newClients.push(newClient);
-  console.log(newClients);
   return newClients;
 };
 
@@ -34,10 +38,18 @@ const set = (clients, clientId, client) => {
   const foundClient = newClients.find((client) => client.id === clientId);
   foundClient.name = client.name;
   foundClient.lastName = client.lastName;
+  foundClient.email = client.email;
+  foundClient.country = client.country;
   return newClients;
 };
 
-const remove = (clients, clientId) => {};
+const remove = (clients, clientId) => {
+  //test function remove
+  const newClients = [...clients];
+  const foundClient = newClients.find((client) => client.id === clientId);
+  newClients.splice(foundClient);
+  return newClients;
+};
 
 const objectToExport = {
   getAll,

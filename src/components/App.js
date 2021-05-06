@@ -25,6 +25,12 @@ function App() {
     setClients(newClients);
   };
 
+  //test remove function
+  const removeClient = (clientId) => {
+    const newClients = clientsService.remove(clients, clientId);
+    setClients(newClients);
+  };
+
   const renderClientDetail = (props) => {
     const clientId = props.match.params.clientId;
     const client = clientsService.get(clients, clientId);
@@ -34,7 +40,7 @@ function App() {
   return (
     <Switch>
       <Route exact path="/">
-        <ClientList clients={clients} />
+        <ClientList clients={clients} removeClient={removeClient} />
         <ClientNew />
       </Route>
       <Route path="/detail/new">
