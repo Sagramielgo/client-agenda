@@ -3,9 +3,11 @@ import '../styles/App.scss';
 
 function ClientNew() {
   return (
-    <div className="btnNew">
-      <Link to="/detail/new">+</Link>
-    </div>
+    <footer className="footer">
+      <div className="btnNew">
+        <Link to="/detail/new">+</Link>
+      </div>
+    </footer>
   );
 }
 

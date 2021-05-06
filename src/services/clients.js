@@ -44,10 +44,13 @@ const set = (clients, clientId, client) => {
 };
 
 const remove = (clients, clientId) => {
-  //test function remove
+  //test Sagra function remove
   const newClients = [...clients];
-  const foundClient = newClients.find((client) => client.id === clientId);
-  newClients.splice(foundClient);
+  const removeClient = newClients.indexOf(clientId);
+  newClients.splice(removeClient, 1);
+
+  /*   const foundClient = newClients.find((client) => client.id === clientId);
+  newClients.splice(foundClient, 1); */
   return newClients;
 };
 

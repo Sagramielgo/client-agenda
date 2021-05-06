@@ -14,16 +14,20 @@ function ClientList(props) {
     return props.clients.map((client) => {
       return (
         <li key={client.id} className="card">
-          <h2>{client.name}</h2>
-          <h2>{client.lastName}</h2>
-          <h2>{client.email}</h2>
-          <h2>{client.country}</h2>
-          <Link className="btn" to={`/detail/${client.id}`}>
-            Edit
-          </Link>
-          <button className="btn" onClick={handleRemove}>
-            Remove
-          </button>
+          <span>First name: </span>
+          <h3>{client.name}</h3>
+          <h3>{`Last name: ${client.lastName}`}</h3>
+          <h3>{`Email: ${client.email}`}</h3>
+          <h3>{`Country: ${client.country}`}</h3>
+
+          <section className="btnSection">
+            <div className="btn">
+              <Link to={`/detail/${client.id}`}>Edit</Link>
+            </div>
+            <button className="btn" onClick={handleRemove}>
+              Remove
+            </button>
+          </section>
         </li>
       );
     });

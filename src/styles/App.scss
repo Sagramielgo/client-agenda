@@ -5,11 +5,17 @@
   list-style: none;
   text-decoration: none;
 }
-
+//ClientNew
+.footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
 .btnNew {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 50px;
   width: 80px;
   height: 80px;
   border: 2px solid grey;
@@ -33,6 +39,9 @@
 }
 .btn {
   width: 100px;
+  height: 40px;
+  border: 2px solid grey;
+  display: inline-block;
 }
 
 //ClientDetail
