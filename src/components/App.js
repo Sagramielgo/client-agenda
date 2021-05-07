@@ -25,7 +25,6 @@ function App() {
     setClients(newClients);
   };
 
-  //test remove function
   const removeClient = (clientId) => {
     const newClients = clientsService.remove(clients, clientId);
     setClients(newClients);
@@ -37,15 +36,19 @@ function App() {
     return <ClientDetail isEdit={true} client={client} setClient={setClient} />;
   };
 
+  const sortedClients = clientsService.sortByLastName(clients);
+
   return (
     <Switch>
       <Route exact path="/">
-        <ClientList clients={clients} removeClient={removeClient} />
+        {/*  to go strictly home */}
+        <ClientList clients={sortedClients} removeClient={removeClient} />
         <ClientNew />
       </Route>
       <Route path="/detail/new">
         <ClientDetail isEdit={false} createClient={createClient} />
       </Route>
+      {/*  dinamic route to go to links in a SPA and share link in browser */}
       <Route path="/detail/:clientId" render={renderClientDetail} />
     </Switch>
   );

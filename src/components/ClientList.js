@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import countryList from 'country-list';
 import ClientNew from './ClientNew';
 
 function ClientList(props) {
@@ -6,25 +7,25 @@ function ClientList(props) {
     return <ul className="clientList">{renderClientsItems()}</ul>;
   };
 
-  const handleRemove = (ev) => {
-    props.removeClient(ev.currentTarget);
-  };
-
   const renderClientsItems = () => {
     return props.clients.map((client) => {
+      const countryName = countryList.getName(client.country);
       return (
-        <li key={client.id} className="card">
-          <span>First name: </span>
-          <h3>{client.name}</h3>
-          <h3>{`Last name: ${client.lastName}`}</h3>
-          <h3>{`Email: ${client.email}`}</h3>
-          <h3>{`Country: ${client.country}`}</h3>
-
+        <li key={client.id} className="table__client">
+          {client.name}
+          {client.lastName}
+          {client.email}
+          <h3>{`Country: ${countryName}`}</h3>
           <section className="btnSection">
             <div className="btn">
               <Link to={`/detail/${client.id}`}>Edit</Link>
             </div>
-            <button className="btn" onClick={handleRemove}>
+            <button
+              className="btn"
+              onClick={() => {
+                props.removeClient(client.id);
+              }}
+            >
               Remove
             </button>
           </section>

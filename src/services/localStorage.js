@@ -1,12 +1,12 @@
-const localStorageKey = 'info';
+const localStorageKey = 'data';
 
-const get = () => {
-  const clients = localStorage.getItem(localStorageKey) || [];
-  return JSON.parse(clients);
+const get = (defaultData) => {
+  const data = localStorage.getItem(localStorageKey);
+  return data === null ? defaultData : JSON.parse(data);
 };
 
-const set = (clients) => {
-  localStorage.setItem(localStorageKey, JSON.stringify(clients));
+const set = (data) => {
+  localStorage.setItem(localStorageKey, JSON.stringify(data));
 };
 
 const objectToExport = {

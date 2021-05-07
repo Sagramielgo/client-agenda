@@ -4,6 +4,7 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
 }
 //ClientNew
 .footer {
@@ -24,25 +25,25 @@
 }
 
 //clientList
-.listContainer {
+/* .listContainer {
   margin: 5%;
-}
-.clientList {
+} */
+/* .clientList {
   display: flex;
-}
-.card {
+} */
+/* .card {
   width: 300px;
   display: flex;
   flex-direction: column;
   border: 2px solid grey;
   margin: 5px;
-}
-.btn {
+} */
+/* .btn {
   width: 100px;
   height: 40px;
   border: 2px solid grey;
   display: inline-block;
-}
+} */
 
 //ClientDetail
 .formContainer {
