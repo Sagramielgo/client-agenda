@@ -59,7 +59,7 @@
   display: flex;
   &__btnEdit {
     width: rem(40);
-    border-radius: rem(3);
+    border-radius: rem(5);
     background-color: $brandColor-1;
     margin-right: rem(10);
     border: none;
@@ -84,7 +84,7 @@
     width: rem(20);
     height: rem(20);
     background-color: rgb(238, 66, 66);
-    border-radius: rem(3);
+    border-radius: rem(5);
     border: none;
     cursor: pointer;
     @include tablet {

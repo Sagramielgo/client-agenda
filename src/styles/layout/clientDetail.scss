@@ -22,18 +22,21 @@
   @include desktop {
     width: rem(500);
   }
+  &__label {
+    @include text;
+    padding-top: rem(10);
+  }
+
   &__input {
     height: rem(30);
     margin: rem(10) 0;
-    border-radius: rem(3);
+    border-radius: rem(5);
     padding-left: rem(5);
-    font-size: rem(16);
+    @include text;
     @include tablet {
-      font-size: rem(18);
       height: rem(40);
     }
     @include desktop {
-      font-size: rem(20);
       height: rem(45);
     }
   }
@@ -45,7 +48,7 @@
   &__submit {
     width: rem(65);
     height: rem(25);
-    border-radius: rem(3);
+    border-radius: rem(5);
     background-color: $brandColor-1;
     border: none;
     cursor: pointer;
