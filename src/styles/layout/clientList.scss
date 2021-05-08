@@ -5,10 +5,11 @@
 
   &__header {
     width: 100%;
+    padding-top: rem(30);
 
     &--title {
       text-align: center;
-      margin-top: rem(10);
+      padding-top: rem(10);
     }
   }
 }
