@@ -6,9 +6,9 @@ import countryList from 'country-list';
 //styles
 import '../styles/layout/clientCard.scss';
 
-function ClientCard(props) {
+function ClientCard(props:any):JSX.Element {
   //Function to get country names
-  const countryName = countryList.getName(props.client.country);
+  const countryName: string | undefined = countryList.getName(props.client.country);
   return (
     <article className="clientCard">
       <h3 className="clientCard__name">{props.client.name}</h3>

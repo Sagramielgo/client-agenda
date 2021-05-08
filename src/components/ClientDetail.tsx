@@ -7,13 +7,13 @@ import FormCountrySelect from './FormCountrySelect';
 //Styles
 import '../styles/layout/clientDetail.scss';
 
-function ClientDetail(props) {
+function ClientDetail(props:any) {
   const [name, setName] = useState(props.client?.name || '');
   const [lastName, setLastName] = useState(props.client?.lastName || '');
   const [email, setEmail] = useState(props.client?.email || '');
   const [country, setCountry] = useState(props.client?.country || '');
 
-  const handleSubmit = (ev) => {
+  const handleSubmit = (ev:any) => {
     ev.preventDefault(); //Avoid the form sending by default
     if (props.isEdit) {
       props.setClient(props.client.id, {
@@ -76,7 +76,7 @@ function ClientDetail(props) {
           <input
             className="form__submit btnCreate"
             type="submit"
-            value={props.isEdit ? 'Edit' : 'Create'}
+            value={props.isEdit ? 'Save' : 'Create'}
           />
         </section>
       </form>

@@ -1,5 +1,5 @@
-function FormInput(props) {
-  const handleInput = (ev) => {
+function FormInput(props: any) {
+  const handleInput = (ev: { target: { value: any; }; }) => {
     props.handleInput(ev.target.value);
   };
 

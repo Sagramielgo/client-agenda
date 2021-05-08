@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../styles/layout/clientNew.scss';
 
-function ClientNew() {
+function ClientNew(): JSX.Element {
   return (
     <footer className="footer">
       <div className="footer__btnNew">

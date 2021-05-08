@@ -1,6 +1,8 @@
 import clientsService from '../services/clients';
 
-const clients = [
+
+
+const clients= [
   {
     name: 'Sagra',
     lastName: 'Mielgo',
@@ -18,17 +20,17 @@ const clients = [
 ];
 describe('clients services > get method', () => {
   test('When there are no clients must return undefined', () => {
-    const clientFound = clientsService.get([], '1');
+    const clientFound:any = clientsService.get([], '1');
     expect(clientFound).toBeUndefined();
   });
 
   test("When the id doesn't exist must return undefined", () => {
-    const clientFound = clientsService.get(clients, '0');
+    const clientFound: any = clientsService.get(clients, '0');
     expect(clientFound).toBeUndefined();
   });
 
   test('When teh id exists must return the client', () => {
-    const clientFound = clientsService.get(clients, '1');
+    const clientFound:any = clientsService.get(clients, '1');
     expect(clientFound.name).toBe('Sagra');
     expect(clientFound.lastName).toBe('Mielgo');
     expect(clientFound.email).toBe('sagramielgo@hotmail.com');

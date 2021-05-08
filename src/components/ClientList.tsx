@@ -5,7 +5,7 @@ import ClientCard from './ClientCard';
 //Styles
 import '../styles/layout/clientList.scss';
 
-function ClientList(props) {
+function ClientList(props: { clients: any[]; removeClient: (arg0: any) => void; }) {
   const renderClientList = () => {
     return (
       <>
@@ -38,7 +38,7 @@ function ClientList(props) {
             There are no registered clients.
           </h1>
           <h2 className="listContainer__header--title">
-            Click on button to create a new one.
+            Click on the button below to create a new one.
           </h2>
         </header>
         <ClientNew />

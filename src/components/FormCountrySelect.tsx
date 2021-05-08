@@ -1,13 +1,13 @@
 import countryList from 'country-list';
 
-function FormSelect(props) {
-  const handleSelect = (ev) => {
+function FormSelect(props:any): JSX.Element {
+  const handleSelect = (ev: { target: { value: any; }; }) =>  {
     props.handleSelect(ev.target.value);
   };
 
   const renderOptions = () => {
     const countries = countryList.getNameList();
-    const result = [];
+    const result:any[] = [];
     for (const countryName in countries) {
       const countryCode = countries[countryName];
       result.push(

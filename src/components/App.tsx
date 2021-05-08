@@ -9,30 +9,36 @@ import ClientNew from './ClientNew';
 // services
 import clientsService from '../services/clients';
 
-function App() {
+//Fuctional componenet
+function App(): JSX.Element {
   const [clients, setClients] = useState(clientsService.getAll());
 
-  const createClient = (client) => {
-    const newClients = clientsService.create(clients, client);
+
+  //We create a new client and keep it in the array
+  const createClient = (client: object) => {
+    const newClients: any[] = clientsService.create(clients, client);
     setClients(newClients);
   };
 
-  const setClient = (clientId, client) => {
-    const newClients = clientsService.set(clients, clientId, client);
+
+  //
+  const setClient = (clientId: number, client: object) => {
+    const newClients: any[] = clientsService.set(clients, clientId, client);
     setClients(newClients);
   };
 
-  const removeClient = (clientId) => {
-    const newClients = clientsService.remove(clients, clientId);
+  const removeClient = (clientId: number) => {
+    const newClients: any[] = clientsService.remove(clients, clientId);
     setClients(newClients);
   };
 
-  const renderClientDetail = (props) => {
-    const clientId = props.match.params.clientId;
-    const client = clientsService.get(clients, clientId);
+  const renderClientDetail = (props: { match: { params: { clientId: any; }; }; }) => {
+    const clientId: any = props.match.params.clientId;
+    const client: any = clientsService.get(clients, clientId);
     return <ClientDetail isEdit={true} client={client} setClient={setClient} />;
   };
 
+  //Call the function to order alphabetically
   const sortedClients = clientsService.sortByLastName(clients);
 
   return (
