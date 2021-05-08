@@ -9,17 +9,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: rem(50);
+    margin: rem(30);
     width: rem(80);
     height: rem(80);
     border: rem(2) solid grey;
     border-radius: 50%;
     font-size: rem(50);
     color: grey;
-    background-color: white;
+    background-color: rgb(94, 203, 240);
     transition: all ease 0.5s;
     &:hover {
       transform: scale(1.1);
+      background-color: white;
     }
 
     &--link {

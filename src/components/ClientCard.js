@@ -1,27 +1,35 @@
 import { Link } from 'react-router-dom';
+
+//libraries
 import countryList from 'country-list';
+
+//styles
 import '../styles/layout/clientCard.scss';
 
 function ClientCard(props) {
+  //Function to get country names
   const countryName = countryList.getName(props.client.country);
   return (
     <article className="clientCard">
       <h3 className="clientCard__name">{props.client.name}</h3>
       <h3 className="clientCard__lastName">{props.client.lastName}</h3>
-      <h3 className="clientCard__email">✉ {props.client.email}</h3>
-      <h3 className="clientCard__country">{`Country: ${countryName}`}</h3>
+      <p className="clientCard__email">{props.client.email}</p>
+      <h3 className="clientCard__country">{countryName}</h3>
       <section className="btnSection">
-        <div className="btn">
-          <Link to={`/detail/${props.client.id}`}>Edit</Link>
-        </div>
+        <button className="btnSection__btnEdit">
+          <Link
+            className="btnSection__btnEdit--link"
+            to={`/detail/${props.client.id}`}
+          >
+            Edit
+          </Link>
+        </button>
         <button
-          className="btn"
+          className="btnSection__btnRemove far fa-trash-alt"
           onClick={() => {
             props.removeClient(props.client.id);
           }}
-        >
-          🗑
-        </button>
+        ></button>
       </section>
     </article>
   );

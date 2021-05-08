@@ -1,0 +1,78 @@
+@import '../core/variables.scss';
+
+.clientCard {
+  box-sizing: border-box;
+  padding: rem(10) 0;
+  width: rem(195);
+  height: rem(130);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: rem(3) solid grey;
+  border-radius: rem(10);
+  margin: rem(5);
+  background-color: white;
+  cursor: pointer;
+  transition: all ease 0.4s;
+  @include tablet {
+    border: 4px solid white;
+    width: 180px;
+    height: 215px;
+  }
+
+  @include desktop {
+    width: 220px;
+    height: 240px;
+  }
+  &__name,
+  &__lastName {
+    font-size: 18px;
+    color: black;
+    text-transform: capitalize;
+    @include tablet {
+      font-size: 22px;
+    }
+    @include desktop {
+      font-size: 24px;
+    }
+  }
+  &__email {
+    font-size: rem(10);
+    color: black;
+    @media all and (min-width: 768px) {
+      font-size: 22px;
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 24px;
+    }
+  }
+  &__country {
+    font-size: rem(15);
+    padding-bottom: rem(5);
+  }
+}
+.btnSection {
+  display: flex;
+  &__btnEdit {
+    width: rem(40);
+    border-radius: rem(3);
+    background-color: blue;
+    margin-right: rem(10);
+    border: none;
+    &--link {
+      color: white;
+      font-size: rem(12);
+    }
+  }
+  &__btnRemove {
+    width: rem(20);
+    height: rem(20);
+    background-color: red;
+    border-radius: rem(3);
+    border: none;
+  }
+}
+.fa-trash-alt {
+  color: white;
+}

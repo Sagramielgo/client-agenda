@@ -1,7 +1,5 @@
 # Sagra Mielgo GIG CHALLENGE
 
-## Guía de inicio rápido
-
 > **NOTE:** You need to have installed [Node JS](https://nodejs.org/) to run this projec:
 
 ### Steps to follow:
@@ -18,63 +16,17 @@
 `npm start`
 ```
 
-- **Abre una ventana de Chrome y muestra tu página web**, al igual que hace el plugin de VS Code Live Server (Go live).
-- También **observa** todos los ficheros que hay dentro de la carpeta `src/`, para que cada vez que modifiques un fichero **refresca tu página en Chrome**.
-- También **procesa los ficheros** HTML, SASS / CSS y JS y los **genera y guarda en la carpeta `public/`**. Por ejemplo:
-  - Convierte los ficheros SASS en CSS.
-  - Combina los diferentes ficheros de HTML y los agrupa en uno o varios ficheros HTML.
+- Fonts imported from [GoogleFonts](https://fonts.google.com/)
+- Icons imported from [Fontawesome](https://fontawesome.com/)
 
-Después de ejecutar `npm start` ya puedes empezar a editar todos los ficheros que están dentro de la carpeta `src/` y programar cómodamente.
+This is a SPA created with [create-react-app](https://create-react-app.dev/) and developed with React.
+Also Sass, Typescript, Country-list libraries have been installed.
 
-### Pasos para publicar el proyecto en GitHub Pages:
+Folder structure:
 
-Para generar tu página para producción ejecuta el comando:
-
-```bash
-npm run docs
-```
-
-Y a continuación:
-
-1. Sube a tu repo la carpeta `docs/` que se te acaba de generar.
-1. Entra en la pestaña `settings` de tu repo.
-1. Y en el apartado de GitHub Pages activa la opción **master branch /docs folder**.
-1. Y ya estaría!!!
-
-Además, los comandos:
-
-```bash
-npm run push-docs
-```
-
-o
-
-```bash
-npm run deploy
-```
-
-son un atajo que nos genera la versión de producción y hace push de la carpeta `docs/` del tirón. Te recomendamos ver el fichero `package.json` para aprender cómo funciona.
-
-## Flujo de archivos con Gulp
-
-## Characters Finder Rick and Morty
-
-El ejercicio consiste en realizar una SPA funcional poniendo en práctica los conocimientos de React adquiridos en Adalab durante este módulo.
-Partimos de una plantilla de React; primero haz npm install y después npm start para visionar el estado del ejercicio en la web.
-
-Podemos modificarla; he actualizado el archivo package json para que cree directamente la carpeta de producción docs, necesaria para publicar en gitHub pages, y no sea necesario ejecutar npm build.
-
-Orden y concierto:
-Carpeta componentes para javascript; carpeta stylesSheets para archivos scss y services para llamada a la API.
-Componentes de javascript con código escrito en JSX, cuya sintaxis es similar a HTML pero en este caso se escribe en archivos de js.
-He preferido utilizar componentes funcionales, you know why ;)
-
-Y DICHO ESTO:
-El ejercicio versa sobre los personajes de la serie de animación RICK AND MORTY.
-
-FASES DEL EJERCICIO:
-
-LLAMADA API: Filtrar de salida la información que nos interesa.
+- Components folder for javascript files.
+- Services folcer for localStorage files.
+- Styles folder scss files. Every scss file has the same name matches with a js file.
 
 PINTAR EN PANTALLA LISTA DE PERSONAJES: Con la información que nos devuelve la API mostrar tarjetas con imagen, nombre y género de cada personaje.
 
@@ -84,15 +36,10 @@ La usuaria puede buscar su personaje favorito por nombre, especie o laneta de or
 TARJETA DETALLE: Haciendo click sobre la tarjeta de un personaje, se muestra una tarjeta ampliando la información con vivo o muerto, especie, planeta de origen y núm de episodios en los que aparece; y por supuesto con un botón para regresar a la página principal
 
 BONUS:
-FILTROS EXTRA: Además del input de texto que pedían he añadido otros dos por planeta de origen y especie.
 
-URL COMPARTIBLES: Para copiar y pegar en tu navegador.
-
-¿Y SI 'COPYPASTEO' MAL...? Salta un mensaje de error en la búsqueda, y te muestra el camino de regreso a casa.
+URL COMPARTIBLES: Para copiar y pegar en tu navegador..
 
 RUTAS DINÁMICAS: Para enviarte a cada tarjeta detalle.
-
-FUNCIONALIDAD LOADING: En caso de que tarde en cargar unos segundos o hubiera algún problema, te indica que esperes, para que no desesperes!
 
 ORDEN ALFABÉTICO: Ordenar las tarjetas de personajes mediante una función.
 

@@ -11,14 +11,19 @@ import '../styles/layout/clientList.scss';
 
 function ClientList(props) {
   const renderClientList = () => {
-    return <ul className="clientList">{renderClientsItems()}</ul>;
+    return (
+      <>
+        <h1 className="clientListTitle">Client list</h1>;
+        <ul className="clientList">{renderClientsItems()}</ul>;
+      </>
+    );
   };
 
   const renderClientsItems = () => {
     return props.clients.map((client) => {
       /*  const countryName = countryList.getName(client.country); */
       return (
-        <li key={client.id} className="table__client">
+        <li key={client.id} className="clientItem">
           <ClientCard
             client={client}
             removeClient={() => {
