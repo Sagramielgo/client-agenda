@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
-import '../styles/App.scss';
+import '../styles/layout/clientNew.scss';
 
 function ClientNew() {
   return (
     <footer className="footer">
-      <div className="btnNew">
-        <Link to="/detail/new">+</Link>
+      <div className="footer__btnNew">
+        <Link className="footer__btnNew--link" to="/detail/new">
+          +
+        </Link>
       </div>
     </footer>
   );

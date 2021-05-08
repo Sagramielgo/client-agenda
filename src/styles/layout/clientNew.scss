@@ -1,0 +1,29 @@
+@import '../core/variables.scss';
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  &__btnNew {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: rem(50);
+    width: rem(80);
+    height: rem(80);
+    border: rem(2) solid grey;
+    border-radius: 50%;
+    font-size: rem(50);
+    color: grey;
+    background-color: white;
+    transition: all ease 0.5s;
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &--link {
+      color: rgb(105, 103, 103);
+    }
+  }
+}

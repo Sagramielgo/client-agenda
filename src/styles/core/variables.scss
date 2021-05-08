@@ -1,0 +1,22 @@
+@import './remFunction.scss';
+@import './reset.scss';
+
+$brandColor-1: violet;
+$brandColor-2: #1c5ba3;
+$brandColor-3: cyan;
+$brandColor-4: aliceBlue;
+$paragraphColor: black;
+
+// display mixins
+
+@mixin tablet {
+  @media all and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media all and (min-width: 1200px) {
+    @content;
+  }
+}

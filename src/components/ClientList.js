@@ -1,6 +1,13 @@
-import { Link } from 'react-router-dom';
-import countryList from 'country-list';
+/* import { Link } from 'react-router-dom';
+//Libraries
+import countryList from 'country-list'; */
+
+//Components
 import ClientNew from './ClientNew';
+import ClientCard from './ClientCard';
+
+//Styles
+import '../styles/layout/clientList.scss';
 
 function ClientList(props) {
   const renderClientList = () => {
@@ -9,10 +16,17 @@ function ClientList(props) {
 
   const renderClientsItems = () => {
     return props.clients.map((client) => {
-      const countryName = countryList.getName(client.country);
+      /*  const countryName = countryList.getName(client.country); */
       return (
         <li key={client.id} className="table__client">
-          {client.name}
+          <ClientCard
+            client={client}
+            removeClient={() => {
+              props.removeClient(client.id);
+            }}
+          />
+
+          {/*  {client.name}
           {client.lastName}
           {client.email}
           <h3>{`Country: ${countryName}`}</h3>
@@ -28,7 +42,7 @@ function ClientList(props) {
             >
               Remove
             </button>
-          </section>
+          </section> */}
         </li>
       );
     });
@@ -37,7 +51,14 @@ function ClientList(props) {
   const renderNewClient = () => {
     return (
       <div className="listContainer">
-        <h1>There are no clients. Click on button to create a new one.</h1>
+        <header className="listContainer__header">
+          <h1 className="listContainer__header--title">
+            There are no registered clients.
+          </h1>
+          <h2 className="listContainer__header--title">
+            Click on button to create a new one.
+          </h2>
+        </header>
         <ClientNew />
       </div>
     );

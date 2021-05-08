@@ -1,0 +1,17 @@
+@import '../core/variables.scss';
+.listContainer {
+  margin: 5%;
+
+  &__header {
+    width: 100%;
+
+    &--title {
+      text-align: center;
+      margin-top: rem(10);
+      /*   font-size: rem(20); */
+    }
+  }
+}
+.clientList {
+  display: flex;
+}
