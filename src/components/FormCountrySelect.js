@@ -22,7 +22,11 @@ function FormSelect(props) {
   return (
     <>
       <label className="form__label">{props.label}</label>
-      <select value={props.value} onChange={handleSelect}>
+      <select
+        className="form__input"
+        value={props.value}
+        onChange={handleSelect}
+      >
         {renderOptions()}
       </select>
     </>

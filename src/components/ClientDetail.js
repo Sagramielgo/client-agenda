@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
+
+//Components
 import FormInput from './FormInput';
 import FormCountrySelect from './FormCountrySelect';
+
+//Styles
+import '../styles/layout/clientDetail.scss';
 
 function ClientDetail(props) {
   const [name, setName] = useState(props.client?.name || '');
@@ -9,7 +14,7 @@ function ClientDetail(props) {
   const [country, setCountry] = useState(props.client?.country || '');
 
   const handleSubmit = (ev) => {
-    ev.preventDefault();
+    ev.preventDefault(); //Avoid the form sending by default
     if (props.isEdit) {
       props.setClient(props.client.id, {
         name: name,
@@ -41,13 +46,12 @@ function ClientDetail(props) {
           value={name}
           handleInput={setName}
         />
-        <label className="form__label">Last name:</label>
-        <input
-          className="form__input"
-          type="text"
+        <FormInput
+          label="Last name:"
+          id="lastName"
           value={lastName}
           required
-          onChange={(ev) => setLastName(ev.target.value)}
+          handleInput={setLastName}
         />
         <FormInput
           label="Email:"
@@ -62,17 +66,19 @@ function ClientDetail(props) {
           value={country}
           handleSelect={setCountry}
         />
-        <input
-          className="form__submit"
-          type="submit"
-          value={props.isEdit ? 'Edit' : 'Create'}
-        />
-        <input
-          className="form__submit"
-          type="button"
-          value="Cancel"
-          onClick={() => window.history.back()}
-        />
+        <section className="form__submitSection">
+          <input
+            className="form__submit btnCancel "
+            type="button"
+            value="Cancel"
+            onClick={() => window.history.back()}
+          />
+          <input
+            className="form__submit btnCreate"
+            type="submit"
+            value={props.isEdit ? 'Edit' : 'Create'}
+          />
+        </section>
       </form>
     </main>
   );

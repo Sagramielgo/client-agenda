@@ -9,9 +9,6 @@ import ClientNew from './ClientNew';
 // services
 import clientsService from '../services/clients';
 
-// styles
-import '../styles/App.scss';
-
 function App() {
   const [clients, setClients] = useState(clientsService.getAll());
 

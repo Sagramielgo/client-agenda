@@ -1,7 +1,7 @@
 @import '../core/variables.scss';
 
 .listContainer {
-  /*  margin: 5%; */
+  margin: 0 3%;
 
   &__header {
     width: 100%;
@@ -15,7 +15,10 @@
 
 .clientListTitle {
   text-align: center;
-  padding: rem(10) 0;
+  padding: rem(20) 0;
+  @include desktop {
+    padding: rem(40) 0;
+  }
 }
 .clientList {
   display: flex;

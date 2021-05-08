@@ -17,7 +17,7 @@ function ClientCard(props) {
       <h3 className="clientCard__country">{countryName}</h3>
       <section className="btnSection">
         <button className="btnSection__btnEdit">
-          <Link
+          <Link //Goes to form page
             className="btnSection__btnEdit--link"
             to={`/detail/${props.client.id}`}
           >

@@ -1,7 +1,3 @@
-/* import { Link } from 'react-router-dom';
-//Libraries
-import countryList from 'country-list'; */
-
 //Components
 import ClientNew from './ClientNew';
 import ClientCard from './ClientCard';
@@ -13,15 +9,14 @@ function ClientList(props) {
   const renderClientList = () => {
     return (
       <>
-        <h1 className="clientListTitle">Client list</h1>;
-        <ul className="clientList">{renderClientsItems()}</ul>;
+        <h1 className="clientListTitle">Client list</h1>
+        <ul className="clientList">{renderClientsItems()}</ul>
       </>
     );
   };
 
   const renderClientsItems = () => {
     return props.clients.map((client) => {
-      /*  const countryName = countryList.getName(client.country); */
       return (
         <li key={client.id} className="clientItem">
           <ClientCard
@@ -30,24 +25,6 @@ function ClientList(props) {
               props.removeClient(client.id);
             }}
           />
-
-          {/*  {client.name}
-          {client.lastName}
-          {client.email}
-          <h3>{`Country: ${countryName}`}</h3>
-          <section className="btnSection">
-            <div className="btn">
-              <Link to={`/detail/${client.id}`}>Edit</Link>
-            </div>
-            <button
-              className="btn"
-              onClick={() => {
-                props.removeClient(client.id);
-              }}
-            >
-              Remove
-            </button>
-          </section> */}
         </li>
       );
     });
