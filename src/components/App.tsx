@@ -39,11 +39,11 @@ function App(): JSX.Element {
     setClients(newClients);
   };
 
-  //Remove client and his data from the array
+  //Alert for the user to rethink delete one client, if it's confirmed then remove client and his data from the array
   const removeClient = (clientId: number) => {
-    const newClients: any[] = clientsService.remove(clients, clientId);
+    if (window.confirm('Are you sure? This will remove this client from the list')) { const newClients: any[] = clientsService.remove(clients, clientId);
     setClients(newClients);
-  };
+    }window.history.back(); }; 
  
   //Route to go to detail card of one client, in order to modify all or some of them.
   const renderClientDetail = (props: { match: { params: { clientId: any; }; }; }) => {
