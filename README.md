@@ -43,7 +43,7 @@ ALPHABETICAL order of clients in the list.
 URL COMPARTIBLES to copy and paste in your browser.
 DYNAMIC ROUTES to send you to the different views of the app.
 AVOID the default sending of the form.
-SAVE no matter upper or lower case.
+SAVE text no matter upper or lower case.
 
 MORE:
 
@@ -51,13 +51,12 @@ MORE:
 - Design and styles mobile first and responsive.
 - Clean, ordered and commented code.
 - Some transitions, in order to improve the user experience.
-- Reused code for inputs, form and some styles.
+- Reused code for inputs and form.
+- Reused styles by reset, variables and mixins.
 - Rem function to unify the meassure expressions.
 
 Still learning, if you wanna know more about me:
 [#gitFuntastic](https://github.com/Sagramielgo)
-
-That's all folks!
 
 ```
 

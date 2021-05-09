@@ -35,3 +35,15 @@ $brandColor-1: rgb(10, 166, 238);
   border-radius: rem(5);
   @content;
 }
+
+//mediaqueries card and btnSection
+@mixin widthMedia {
+  width: rem(195);
+  @include tablet {
+    width: rem(230);
+  }
+  @include desktop {
+    width: rem(260);
+  }
+  @content;
+}
