@@ -58,11 +58,15 @@
 .btnSection {
   display: flex;
   &__btnEdit {
-    width: rem(40);
-    border-radius: rem(5);
-    background-color: $brandColor-1;
-    margin-right: rem(10);
-    border: none;
+    @include button {
+      width: rem(40);
+      border-radius: rem(5);
+      background-color: $brandColor-1;
+      margin-right: rem(10);
+      &:hover {
+        background-color: rgb(57, 40, 218);
+      }
+    }
     @include tablet {
       width: rem(50);
     }
@@ -81,12 +85,17 @@
     }
   }
   &__btnRemove {
-    width: rem(20);
-    height: rem(20);
-    background-color: rgb(241, 80, 80);
-    border-radius: rem(5);
-    border: none;
-    cursor: pointer;
+    @include button {
+      width: rem(20);
+      height: rem(20);
+      background-color: rgb(248, 95, 95);
+      border-radius: rem(5);
+    }
+
+    &:hover {
+      background-color: rgb(212, 28, 28);
+    }
+
     @include tablet {
       width: rem(30);
       height: rem(25);

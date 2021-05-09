@@ -27,3 +27,10 @@ $brandColor-2: #1c5ba3;
   }
   @content;
 }
+
+@mixin button {
+  border: none;
+  cursor: pointer;
+  transition: all ease 0.5s;
+  @content;
+}

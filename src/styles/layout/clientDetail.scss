@@ -46,28 +46,33 @@
     margin-top: rem(20);
   }
   &__submit {
-    width: rem(65);
-    height: rem(25);
-    border-radius: rem(5);
-    background-color: $brandColor-1;
-    border: none;
-    cursor: pointer;
-    font-size: rem(14);
+    @include button {
+      width: rem(65);
+      height: rem(25);
+      border-radius: rem(5);
+      font-size: rem(14);
+    }
     @include tablet {
-      width: rem(70);
+      width: rem(75);
       height: rem(30);
       font-size: rem(16);
     }
     @include desktop {
-      width: rem(80);
+      width: rem(90);
       height: rem(35);
       font-size: rem(18);
     }
   }
   .btnCreate {
-    background-color: rgb(76, 216, 34);
+    background-color: rgb(93, 245, 47);
+    &:hover {
+      background-color: rgb(81, 207, 42);
+    }
   }
   .btnCancel {
-    background-color: orange;
+    background-color: rgb(223, 219, 219);
+    &:hover {
+      background-color: rgb(201, 197, 197);
+    }
   }
 }
