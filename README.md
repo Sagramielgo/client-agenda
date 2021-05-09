@@ -1,6 +1,6 @@
 # Sagra Mielgo GIG CHALLENGE
 
-> **NOTE:** You need to have installed [Node JS](https://nodejs.org/) to run this projec.
+> **NOTE:** You need to have installed [Node JS](https://nodejs.org/) to run this project.
 > This is a SPA created with [Create React App](https://create-react-app.dev/) and developed with React and Javascript.
 > Also Sass, Typescript, Country-list dependencies have been installed.
 
@@ -23,6 +23,7 @@
 
 Folder structure:
 
+- Scr folder for development folders and files.
 - Components folder for javascript files.
 - Services folcer for localStorage files.
 - Styles folder scss files. Every scss file has the same name matches with a js file.

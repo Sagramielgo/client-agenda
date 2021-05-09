@@ -32,5 +32,6 @@ $brandColor-1: rgb(10, 166, 238);
   border: none;
   cursor: pointer;
   transition: all ease 0.5s;
+  border-radius: rem(5);
   @content;
 }

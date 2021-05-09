@@ -12,10 +12,9 @@
     margin: rem(30);
     width: rem(60);
     height: rem(60);
-    border: rem(2) solid grey;
+    border: rem(2) solid rgb(107, 106, 106);
     border-radius: 50%;
     font-size: rem(40);
-    color: grey;
     background-color: $brandColor-1;
     transition: all ease 0.5s;
     &:hover {
@@ -35,6 +34,7 @@
     }
     &--link {
       color: white;
+      padding: rem(15);
       &:hover {
         color: rgb(105, 103, 103);
       }

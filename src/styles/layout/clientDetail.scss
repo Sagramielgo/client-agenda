@@ -13,9 +13,8 @@
   width: rem(320);
   background-color: white;
   padding: rem(20);
-  border: rem(2) solid grey;
   border-radius: rem(10);
-  box-shadow: rem(3) rem(5) rem(7) grey;
+  box-shadow: rem(3) rem(7) rem(10) rgb(156, 155, 155);
   @include tablet {
     width: rem(420);
   }
@@ -47,9 +46,8 @@
   }
   &__submit {
     @include button {
-      width: rem(65);
+      width: rem(70);
       height: rem(25);
-      border-radius: rem(5);
       font-size: rem(14);
     }
     @include tablet {
