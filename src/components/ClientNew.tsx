@@ -3,7 +3,7 @@ import '../styles/layout/clientNew.scss';
 
 function ClientNew(): JSX.Element {
   return (
-    <footer className="footer">
+    <footer className="footer"> 
       <div className="footer__btnNew">
         <Link className="footer__btnNew--link" to="/detail/new">
           +

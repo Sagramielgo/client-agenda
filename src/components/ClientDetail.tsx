@@ -18,17 +18,17 @@ function ClientDetail(props:any) {
     ev.preventDefault(); //Avoid the form sending by default
     if (props.isEdit) {
       props.setClient(props.client.id, {
-        name: name,
-        lastName: lastName,
-        email: email,
-        country: country,
+       name,
+       lastName,
+       email,
+       country,
       });
     } else {
       props.createClient({
-        name: name,
-        lastName: lastName,
-        email: email,
-        country: country,
+      name,
+      lastName,
+      email,
+      country,
       });
     }
     window.history.back(); // Back to home page
@@ -40,6 +40,7 @@ function ClientDetail(props:any) {
 
   return (
     <main className="formContainer">
+      <h2 className="formContainer__title">All the fields are required</h2>
       <form className="form" onSubmit={handleSubmit}>
         <FormInput
           label="First name:"

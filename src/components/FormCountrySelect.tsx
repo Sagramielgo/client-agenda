@@ -5,6 +5,7 @@ function FormSelect(props:any): JSX.Element {
     props.handleSelect(ev.target.value);
   };
 
+  //Get the name of the countries in the dropdown
   const renderOptions = () => {
     const countries = countryList.getNameList();
     const result:any[] = [];

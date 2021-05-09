@@ -9,6 +9,8 @@ import '../styles/layout/clientCard.scss';
 function ClientCard(props:any):JSX.Element {
   //Function to get country names
   const countryName: string | undefined = countryList.getName(props.client.country);
+
+  //Return card structure for each client
   return (
     <article className="clientCard">
       <h3 className="clientCard__name">{props.client.name}</h3>

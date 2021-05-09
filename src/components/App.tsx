@@ -20,7 +20,6 @@ export type clientObj = {
 };
 
 
-
 //Fuctional component
 function App(): JSX.Element {
   const [clients, setClients] = useState<clientObj[]>(clientsService.getAll());
