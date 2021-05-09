@@ -8,10 +8,11 @@ import FormCountrySelect from './FormCountrySelect';
 import '../styles/layout/clientDetail.scss';
 
 function ClientDetail(props:any) {
-  const [name, setName] = useState(props.client?.name || '');
-  const [lastName, setLastName] = useState(props.client?.lastName || '');
-  const [email, setEmail] = useState(props.client?.email || '');
-  const [country, setCountry] = useState(props.client?.country || '');
+  //Initial state of client properties
+  const [name, setName] = useState<string>(props.client?.name || '');
+  const [lastName, setLastName] = useState<string>(props.client?.lastName || '');
+  const [email, setEmail] = useState<string>(props.client?.email || '');
+  const [country, setCountry] = useState<string>(props.client?.country || '');
 
   const handleSubmit = (ev:any) => {
     ev.preventDefault(); //Avoid the form sending by default
@@ -33,6 +34,7 @@ function ClientDetail(props:any) {
     window.history.back(); // Back to home page
   };
 
+  //Regular expression to validate mail
   const emailRegexValidator =
     '^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$';
 

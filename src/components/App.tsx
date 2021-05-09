@@ -9,29 +9,43 @@ import ClientNew from './ClientNew';
 // services
 import clientsService from '../services/clients';
 
-//Fuctional componenet
+
+//Interface for const client
+export type clientObj = {
+  id: number
+  name: string;
+  lastName: string;
+  email: string;
+  country: string;
+};
+
+
+
+//Fuctional component
 function App(): JSX.Element {
-  const [clients, setClients] = useState(clientsService.getAll());
+  const [clients, setClients] = useState<clientObj[]>(clientsService.getAll());
 
 
-  //We create a new client and keep it in the array
+  //Create a new client and save it into the array
   const createClient = (client: object) => {
     const newClients: any[] = clientsService.create(clients, client);
     setClients(newClients);
   };
 
 
-  //
+  //Modify client's data and save it into the array 
   const setClient = (clientId: number, client: object) => {
     const newClients: any[] = clientsService.set(clients, clientId, client);
     setClients(newClients);
   };
 
+  //Remove client and his data from the array
   const removeClient = (clientId: number) => {
     const newClients: any[] = clientsService.remove(clients, clientId);
     setClients(newClients);
   };
-
+ 
+  //Route to go to detail card of one client, in order to modify all or some of them.
   const renderClientDetail = (props: { match: { params: { clientId: any; }; }; }) => {
     const clientId: any = props.match.params.clientId;
     const client: any = clientsService.get(clients, clientId);

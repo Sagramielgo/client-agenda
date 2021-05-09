@@ -1,9 +1,19 @@
+
 import clientsService from '../services/clients';
 
+ /* interface ClientProperties {
+ 
+  name: string;
+  lastName: string;
+  email: string;
+  country: string;
+  id: string
+};  */
+ 
 
 
 const clients= [
-  {
+  { 
     name: 'Sagra',
     lastName: 'Mielgo',
     email: 'sagramielgo@hotmail.com',
@@ -18,6 +28,8 @@ const clients= [
     id: '2',
   },
 ];
+
+//Test get function from localStorage
 describe('clients services > get method', () => {
   test('When there are no clients must return undefined', () => {
     const clientFound:any = clientsService.get([], '1');

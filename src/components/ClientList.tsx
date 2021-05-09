@@ -15,6 +15,7 @@ function ClientList(props: { clients: any[]; removeClient: (arg0: any) => void; 
     );
   };
 
+//Paint every item of the list by travelling around the array
   const renderClientsItems = () => {
     return props.clients.map((client) => {
       return (
@@ -30,6 +31,7 @@ function ClientList(props: { clients: any[]; removeClient: (arg0: any) => void; 
     });
   };
 
+  //Paint a message in case there are no clients yet.
   const renderNewClient = () => {
     return (
       <div className="listContainer">
@@ -48,7 +50,7 @@ function ClientList(props: { clients: any[]; removeClient: (arg0: any) => void; 
 
   return (
     <div className="listContainer">
-      {props.clients.length ? renderClientList() : renderNewClient()}
+      {props.clients.length ? renderClientList() : renderNewClient()} 
     </div>
   );
 }

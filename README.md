@@ -1,6 +1,8 @@
 # Sagra Mielgo GIG CHALLENGE
 
-> **NOTE:** You need to have installed [Node JS](https://nodejs.org/) to run this projec:
+> **NOTE:** You need to have installed [Node JS](https://nodejs.org/) to run this projec.
+> This is a SPA created with [create-react-app](https://create-react-app.dev/) and developed with React and Javascript.
+> Also Sass, Typescript, Country-list libraries have been installed.
 
 ### Steps to follow:
 
@@ -19,27 +21,25 @@
 - Fonts imported from [GoogleFonts](https://fonts.google.com/)
 - Icons imported from [Fontawesome](https://fontawesome.com/)
 
-This is a SPA created with [create-react-app](https://create-react-app.dev/) and developed with React.
-Also Sass, Typescript, Country-list libraries have been installed.
-
 Folder structure:
 
 - Components folder for javascript files.
 - Services folcer for localStorage files.
 - Styles folder scss files. Every scss file has the same name matches with a js file.
+- Test folder for testing file.
 
-PINTAR EN PANTALLA LISTA DE PERSONAJES: Con la información que nos devuelve la API mostrar tarjetas con imagen, nombre y género de cada personaje.
+Functionalities yo can check in the aplication:
 
-FILTROS: En un formulario planteamos diversas formas de búsqueda, combinando también funcionalidades distintas (como inputs de texto, desplegables o checkboxes):
-La usuaria puede buscar su personaje favorito por nombre, especie o laneta de origen.
-
-TARJETA DETALLE: Haciendo click sobre la tarjeta de un personaje, se muestra una tarjeta ampliando la información con vivo o muerto, especie, planeta de origen y núm de episodios en los que aparece; y por supuesto con un botón para regresar a la página principal
+1. PINTAR EN PANTALLA LISTA DE Clientes: mostrar name, last name, email and country de cada cliente
+2. Button to create new clients always on view, to make it easier to user.
+3. You can edit or remove the information of each client directly from the card on the list.
+4. You can directly write a mail clicking on the email address on the client card.
 
 BONUS:
 
-URL COMPARTIBLES: Para copiar y pegar en tu navegador..
+URL COMPARTIBLES: Para copiar y pegar en tu navegador.
 
-RUTAS DINÁMICAS: Para enviarte a cada tarjeta detalle.
+RUTAS DINÁMICAS: Para enviarte a cada vista de la aplicación.
 
 ORDEN ALFABÉTICO: Ordenar las tarjetas de personajes mediante una función.
 
@@ -47,17 +47,13 @@ EVITAR el envío por defecto del formulario.
 
 FILTRADO con independencia de mayúsculas y minúsculas.
 
-CADA OVEJA CON SU PAREJA: Cada componente de js tiene su correspondiente archivo de estilos, con el mismo nombre y en una carpeta gemela. Para que puedas llevarte a tu proyecto el trocito que te guste, completo.
+BONUS:
 
-MEJORAS:
-
-- Estilos y diseño: La página es muy chula, responsive y grid-friendly.
-- Código limpio, ordenado y comentado.
-- Mensaje de Oops!, no encuentro lo que buscas. Try again!
-- Animaciones, para que sea divertida y adictiva la experiencia de usuaria.
-- COLAPSABLE: Un botón abre y cierra la sección de filtros, experiencia de usuaria completa.
-
-Puedes descargar, clonar, copiar o inspirarte; compartir es vivir!
+- Simple, clear and intuitive app.
+- Design and styles mobile first and responsive.
+- Clean, ordered and commented code.
+- Some transitions, in order to improve the user experience.
+- Reused code for inputs and form.
 
 Still learning, if you wanna know more about me:
 [#gitFuntastic](https://github.com/Sagramielgo)

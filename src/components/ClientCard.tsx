@@ -13,7 +13,9 @@ function ClientCard(props:any):JSX.Element {
     <article className="clientCard">
       <h3 className="clientCard__name">{props.client.name}</h3>
       <h3 className="clientCard__lastName">{props.client.lastName}</h3>
-      <p className="clientCard__email">{props.client.email}</p>
+      <a className="clientCard__email" 
+         href={`mailto:${props.client.email}`}>
+         {props.client.email}</a>
       <h3 className="clientCard__country">{countryName}</h3>
       <section className="btnSection">
         <button className="btnSection__btnEdit">
