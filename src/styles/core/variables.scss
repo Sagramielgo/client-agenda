@@ -2,10 +2,8 @@
 @import './reset.scss';
 
 $brandColor-1: rgb(10, 166, 238);
-$brandColor-2: #1c5ba3;
 
 // display mixins
-
 @mixin tablet {
   @media all and (min-width: 768px) {
     @content;
@@ -17,6 +15,8 @@ $brandColor-2: #1c5ba3;
     @content;
   }
 }
+
+//Styles mixins
 @mixin text {
   font-size: rem(16);
   @include tablet {

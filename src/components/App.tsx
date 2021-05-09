@@ -41,7 +41,7 @@ function App(): JSX.Element {
 
   //Alert for the user to rethink delete one client, if it's confirmed then remove client and his data from the array
   const removeClient = (clientId: number) => {
-    if (window.confirm('Are you sure? This will remove this client from the list')) { const newClients: any[] = clientsService.remove(clients, clientId);
+    if (window.confirm('Are you sure? This action will permanently delete this client from the list.')) { const newClients: any[] = clientsService.remove(clients, clientId);
     setClients(newClients);
     }window.history.back(); }; 
  

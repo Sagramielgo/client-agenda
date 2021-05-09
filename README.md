@@ -1,7 +1,7 @@
 # Sagra Mielgo GIG CHALLENGE
 
 > **NOTE:** You need to have installed [Node JS](https://nodejs.org/) to run this projec.
-> This is a SPA created with [create-react-app](https://create-react-app.dev/) and developed with React and Javascript.
+> This is a SPA created with [Create React App](https://create-react-app.dev/) and developed with React and Javascript.
 > Also Sass, Typescript, Country-list dependencies have been installed.
 
 ### Steps to follow:
